@@ -70,7 +70,7 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   result = ""
   holiday_hash.each do |season, holidays_hash|
-    puts season + ":"
+    puts (season + ":")
     holidays_hash.each do |holiday, supplies|
        result << (holiday + ": ")
       supplies.each_with_index do |supply, index|
