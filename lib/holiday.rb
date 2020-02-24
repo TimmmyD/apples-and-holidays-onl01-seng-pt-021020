@@ -70,9 +70,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   result = ""
   holiday_hash.each do |season, holidays_hash|
-    puts (season + ":")
+    puts (season.to_s + ":")
     holidays_hash.each do |holiday, supplies|
-       result << (holiday + ": ")
+       result << (holiday.to_s + ": ")
       supplies.each_with_index do |supply, index|
         if index == supplies.length - 1
           result << supply
