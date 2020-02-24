@@ -93,7 +93,13 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, holidays_hash|
     holidays_hash.each do |holiday, supplies_arr|
       supplies_arr.each do |supply|
-        if supply == 
+        if supply.eql?("BBQ")
+          result_array << supply
+        end
+      end
+    end
+  end
+  result_array
 end
 
 
