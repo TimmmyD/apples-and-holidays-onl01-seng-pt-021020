@@ -72,9 +72,16 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays_hash|
     puts season + ":"
     holidays_hash.each do |holiday, supplies|
-       print "  " + holiday + ": "
-      supplies.each do |supply|
-        print supply + ", " 
+       result << (holiday + ": ")
+      supplies.each_with_index do |supply, index|
+        if index == supplies.length - 1
+          result << supply
+        else
+          result <<  (supply + ", ") 
+        end
+      end
+      puts result
+      result = ""
         
         
 
