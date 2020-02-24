@@ -94,7 +94,7 @@ def all_holidays_with_bbq(holiday_hash)
     holidays_hash.each do |holiday, supplies_arr|
       supplies_arr.each do |supply|
         if supply.eql?("BBQ")
-          result_array << supply
+          result_array << holiday
         end
       end
     end
